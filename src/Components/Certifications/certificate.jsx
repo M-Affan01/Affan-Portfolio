@@ -8,7 +8,7 @@ import DigitalFreelancing from "../../assets/Digital Freelancing Certificate.png
 import BasicsOfComputerNetworks from "../../assets/Computer Networks.jpg";
 import HCIA from "../../assets/Huawei Certificate.png";
 import ComputerNetwork from "../../assets/Huawei Certificate-detail.png";
-import Python from "../../assets/Introduction to Python.jpg";
+import Python from "../../assets/Introduction to python.jpg";
 import CleaningData from "../../assets/Cleaning Data.jpg";
 import IntroductionToAIAgents from "../../assets/Introduction to AI Agents.jpg";
 
