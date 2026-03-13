@@ -155,6 +155,7 @@
     opacity: 0.35;
     pointer-events: none;
     filter: blur(50px);
+    will-change: transform;
 }
 
 .spline-container {

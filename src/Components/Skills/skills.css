@@ -92,6 +92,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translateY(30px);
+    will-change: transform, box-shadow;
 }
 
 .skill-card.visible {
@@ -145,6 +146,7 @@
     border-radius: 14px;
     border: 1px solid var(--border);
     transition: all 0.4s ease;
+    will-change: transform, background-color;
 }
 
 .skill-card:hover .icon-wrapper {
