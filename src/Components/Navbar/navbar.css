@@ -243,3 +243,15 @@
         padding: 10px 14px;
     }
 }
+
+@media (max-width: 320px) {
+    .navbar {
+        padding: 15px 10px;
+    }
+    .navbar .left {
+        font-size: 16px;
+    }
+    .mobile-drawer {
+        padding: 15px 5%;
+    }
+}
