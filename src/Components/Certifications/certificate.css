@@ -226,8 +226,8 @@
 }
 
 .cert-modal-close svg {
-    font-size: 1.8rem;
-    stroke-width: 2.5px;
+    font-size: 1.5rem;
+    stroke-width: 2px;
 }
 
 .cert-modal-close:hover {
@@ -274,10 +274,10 @@
 
 @media (max-width: 768px) {
     .cert-modal-close {
-        top: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
     }
     
     .cert-modal-close svg {
@@ -285,6 +285,11 @@
     }
     
     .cert-modal-content {
-        max-width: 95%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .cert-link {
+        padding: 20px 0;
     }
 }

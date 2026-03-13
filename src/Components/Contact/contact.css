@@ -430,20 +430,35 @@
 
 @media (max-width: 640px) {
     .contact-section {
-        padding: 80px 5%;
+        padding: 60px 5%;
     }
 
     .form-group-row {
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
     }
 
     .contact-form-wrapper {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+    
+    .contact-form {
+        gap: 16px;
     }
 
     .info-card {
-        padding: 20px;
+        padding: 16px;
+        gap: 15px;
+    }
+    
+    .info-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+    
+    .info-icon {
+        font-size: 1.25rem;
     }
 
     .contact-socials .social-icons-grid {
@@ -456,9 +471,10 @@
 
     .custom-toast {
         bottom: 20px;
-        right: 20px;
-        left: 20px;
+        right: 15px;
+        left: 15px;
         width: auto;
         max-width: none;
+        padding: 16px;
     }
 }

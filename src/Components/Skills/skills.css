@@ -178,4 +178,17 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
+    .skills-section {
+        padding: 60px 16px 80px;
+    }
+}
+
+@media (max-width: 380px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .skill-card {
+        padding: 20px 12px;
+    }
 }

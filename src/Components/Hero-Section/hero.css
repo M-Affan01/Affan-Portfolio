@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 100px 5% 60px;
+    padding: 120px 5% 60px;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -162,8 +162,9 @@
 
 @media (max-width: 768px) {
     .abc {
-        font-size: 1.1rem;
-        padding: 0 20px;
+        font-size: 1.05rem;
+        padding: 0 10px;
+        line-height: 1.7;
     }
 
     .hero-btns {
@@ -176,5 +177,21 @@
     .btn-secondary {
         width: 100%;
         max-width: 320px;
+        padding: 16px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 100px;
+    }
+    
+    .hero .second {
+        letter-spacing: -1px;
+    }
+    
+    .typewriter-container {
+        min-height: 60px;
     }
 }

@@ -160,6 +160,20 @@
     z-index: 5;
 }
 
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 80px 5% 40px;
+    }
+    
+    .panel-description {
+        padding: 1.25rem;
+    }
+    
+    .panel-description h3 {
+        font-size: 1.3rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .panel-description {
         padding: 3rem;
