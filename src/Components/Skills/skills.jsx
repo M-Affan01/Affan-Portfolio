@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Skills.css';
+import './skills.css';
 import { FaWindows, FaDatabase } from 'react-icons/fa';
 import { TbCpu } from 'react-icons/tb';
 import { SiVercel } from 'react-icons/si';
