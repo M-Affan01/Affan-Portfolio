@@ -1,0 +1,90 @@
+:root {
+    --bg: #050505;
+    --bg-secondary: #0a0a0f;
+    --fg: #e8e8ec;
+    --muted: #a1a1aa;
+    --accent: #00d4aa;
+    --accent-dim: rgba(0, 212, 170, 0.12);
+    --card: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.08);
+    --glow: rgba(0, 212, 170, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Sora', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: -1;
+    mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+}
+
+.bg-glow {
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.glow-1 {
+    top: -150px;
+    right: -100px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+.glow-2 {
+    bottom: -150px;
+    left: -100px;
+    background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+}

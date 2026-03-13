@@ -1,0 +1,61 @@
+/* Modern Social Icons Styling */
+
+.social-icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto 0;
+    gap: 15px;
+    width: 100%;
+}
+
+.social-icon-link {
+    display: block;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+}
+
+.social-icon-article {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--fg);
+    border-radius: 12px;
+    font-size: 28px;
+    transition: all 0.3s ease;
+}
+
+.social-icon-article:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-icons-grid {
+        justify-content: center;
+    }
+
+    .social-icon-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icon-article {
+        font-size: 22px;
+    }
+}

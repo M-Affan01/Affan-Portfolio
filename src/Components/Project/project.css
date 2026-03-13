@@ -1,0 +1,328 @@
+.projects-section {
+    padding: 100px 5%;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.title-gradient {
+    background: linear-gradient(135deg, var(--fg) 0%, var(--muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Filter Styles */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.filter-btn:hover {
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+/* Projects List Layout */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+}
+
+.row-normal {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* 
+   Zigzag Layout:
+   We flip the media position, but keep the text left-aligned 
+   to match the user's reference image exactly.
+*/
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Always left aligned as per reference image */
+}
+
+/* Media Card Styles */
+.project-media-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.media-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.media-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease;
+}
+
+.media-wrapper:hover .media-inner {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.media-sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.05) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.project-media-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-num {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 10px; /* Reduced to match reference image */
+    display: block;
+    color: #fff;
+}
+
+.project-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px; /* Reduced to match reference image */
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    /* Reduced margin */
+    max-width: 500px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    /* Reduced margin */
+}
+
+.live-link,
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 48px;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium Light Button (Live Link) */
+.live-link {
+    background: #fff;
+    color: #000;
+}
+
+.live-link svg {
+    color: #000;
+    stroke: #000;
+    opacity: 1;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.live-link:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.live-link:hover svg {
+    color: #fff;
+    stroke: #fff;
+    transform: translate(3px, -3px);
+}
+
+/* Premium Dark/Glass Button (GitHub) */
+.github-link {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.github-link svg {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github-link:hover svg {
+    transform: translate(3px, -3px) rotate(15deg) scale(1.1);
+}
+
+/* Show More Button */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.show-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.show-more-btn svg {
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .project-item {
+        gap: 40px;
+    }
+
+    .project-num {
+        font-size: 3rem;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .projects-list {
+        gap: 60px;
+    }
+
+    .project-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .project-media-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .media-wrapper {
+        aspect-ratio: 16 / 9;
+        /* More natural for mobile stack if not strictly square */
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .project-desc {
+        max-width: 100%;
+    }
+}
